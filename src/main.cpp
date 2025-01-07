@@ -15,7 +15,7 @@
 #define DC_STEPPING_MOTOR_PIN_3 7
 #define DC_STEPPING_MOTOR_PIN_4 8
 
-
+//Mode: DC_MOTOR_Forward, DC_MOTOR_Backward, DC_MOTOR_Brake, DC_MOTOR_Stop
 //Speed: 0-255
 void DC_Motor_Control(int Mode, int Speed){
   switch (Mode){
@@ -40,11 +40,31 @@ void DC_Motor_Control(int Mode, int Speed){
   }
 }
 
+void Stepping_Motor_Control_Test(){
+  digitalWrite(DC_STEPPING_MOTOR_PIN_1, HIGH);
+  digitalWrite(DC_STEPPING_MOTOR_PIN_2, LOW);
+
+  digitalWrite(DC_STEPPING_MOTOR_PIN_1, LOW);
+  digitalWrite(DC_STEPPING_MOTOR_PIN_2, HIGH);
+
+  digitalWrite(DC_STEPPING_MOTOR_PIN_3, HIGH);
+  digitalWrite(DC_STEPPING_MOTOR_PIN_4, LOW);
+
+  digitalWrite(DC_STEPPING_MOTOR_PIN_3, LOW);
+  digitalWrite(DC_STEPPING_MOTOR_PIN_4, HIGH);
+}
+
 void setup() {
   Serial.begin(115200);
+  Serial1.begin(115200);  //TX1: 18, RX1: 19
 
   pinMode(DC_MOTOR_CONTROL_PIN_1, OUTPUT);
   pinMode(DC_MOTOR_CONTROL_PIN_2, OUTPUT);
+
+  pinMode(DC_STEPPING_MOTOR_PIN_1, OUTPUT);
+  pinMode(DC_STEPPING_MOTOR_PIN_2, OUTPUT);
+  pinMode(DC_STEPPING_MOTOR_PIN_3, OUTPUT);
+  pinMode(DC_STEPPING_MOTOR_PIN_4, OUTPUT);
 }
 
 void loop() {
