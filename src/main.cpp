@@ -1,12 +1,21 @@
 #include <Arduino.h>
 
+
 #define DC_MOTOR_CONTROL_PIN_1 3
 #define DC_MOTOR_CONTROL_PIN_2 4
 
-//Mode 0: Forward
-//Mode 1: Backward
-//Mode 2: Brake
-//Mode 3: Stop
+#define DC_MOTOR_Forward 0
+#define DC_MOTOR_Backward 1
+#define DC_MOTOR_Brake 2
+#define DC_MOTOR_Stop 3
+
+
+#define DC_STEPPING_MOTOR_PIN_1 5
+#define DC_STEPPING_MOTOR_PIN_2 6
+#define DC_STEPPING_MOTOR_PIN_3 7
+#define DC_STEPPING_MOTOR_PIN_4 8
+
+
 //Speed: 0-255
 void DC_Motor_Control(int Mode, int Speed){
   switch (Mode){
