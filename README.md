@@ -1,4 +1,4 @@
-# 🤖GPS Robot Project Software
+# 🤖GPS Robot Project Motor Control
 
 <div align="center"><a href="https://github.com/JamesXiaoMo/GPSRobotProject/blob/master"><img src="https://github.com/JamesXiaoMo/GPSRobotProject/blob/master/assets/images/icon.png" height="256" border="0"></a></div>
 
